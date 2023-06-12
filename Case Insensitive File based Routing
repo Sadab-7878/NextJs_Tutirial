@@ -1,0 +1,23 @@
+// এই নিচের কোডগুলি next.config.js file  এ লিখতে হবে
+
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // reactStrictMode : true,
+
+  async rewrites() {
+    return [
+        {
+          source: '/(a|A)(b|B)(o|O)(u|U)(t|T)', //এটা particular character নিবে
+          destination: '/about',
+        },
+
+    //   {
+    //     source: "/(.*)",  এটা a to z সব character নিবে
+    //     destination: "/about",   
+    //   },
+    ];
+  },
+};
+
+module.exports = nextConfig;
